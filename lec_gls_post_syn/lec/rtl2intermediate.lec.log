@@ -1,0 +1,1038 @@
+                          CONFORMAL (R)
+                   Version 21.10-s300 (22-Aug-2021) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2021. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1781 days old. You can download the latest version from http://downloads.cadence.com.
+
+0
+// Command: usage -auto -elapse
+// Command: usage -auto -elapse
+CPU time     : 0.21    seconds
+Elapse time  : 1       seconds
+Memory usage : 95.87   M bytes
+0
+// Command: set_mapping_method -sensitive
+// Command: set_mapping_method -sensitive
+0
+// Command: set_verification_information rtl_fv_map_db
+// Command: set_verification_information rtl_fv_map_db
+// Verification information is set to /home/msdlab/Desktop/Intern_Vignesh/04_UART_POST_SYNTHESIS_LEC/rtl_fv_map_db.
+// Advanced reporting is enabled and the output is written to /home/msdlab/Desktop/Intern_Vignesh/04_UART_POST_SYNTHESIS_LEC/rtl_fv_map_db
+0
+// Command: read_implementation_information fv/uart_top_pad -revised fv_map
+// Command: read_implementation_information fv/uart_top_pad -revised fv_map
+// Reading implementation information from fv/uart_top_pad ...
+================================================================================
+          Information Category                         Count
+--------------------------------------------------------------------------------
+     Sequential instance phase                            63
+       Sequential optimization                             0
+        Sequential duplication                             0
+         Boundary optimization                             0
+            Synthesis equation                             0
+    Combinational loop breaker                             0
+                       Mapping                             0
+================================================================================
+// Note: Read implementation information successfully.
+0
+// Command: set_parallel_option -threads 1,4 -norelease_license
+// Command: set_parallel_option -threads 1,4 -norelease_license
+// Number of threads is set to 1,4.
+0
+// Command: set_compare_options -threads 1,4
+// Command: set_compare_options -threads 1,4
+Set computing threads of compare to 1,4.
+0
+// Command: set env(RC_VERSION)     "21.14-s082_1"
+21.14-s082_1
+// Command: set env(CDN_SYNTH_ROOT) "/home/install/GENUS211/tools.lnx86"
+/home/install/GENUS211/tools.lnx86
+// Command: set CDN_SYNTH_ROOT      "/home/install/GENUS211/tools.lnx86"
+/home/install/GENUS211/tools.lnx86
+// Command: set env(CW_DIR) "/home/install/GENUS211/tools.lnx86/lib/chipware"
+/home/install/GENUS211/tools.lnx86/lib/chipware
+// Command: set CW_DIR      "/home/install/GENUS211/tools.lnx86/lib/chipware"
+/home/install/GENUS211/tools.lnx86/lib/chipware
+// Command: set lec_version_required "21.20249"
+21.20249
+// Command: if { ($lec_version < $lec_version_required) &&
+//              [file exists /home/install/GENUS211/tools.lnx86/lib/chipware/old_encrypt_sim]} {
+//              set env(CW_DIR_SIM) "/home/install/GENUS211/tools.lnx86/lib/chipware/old_encrypt_sim"
+//              set CW_DIR_SIM      "/home/install/GENUS211/tools.lnx86/lib/chipware/old_encrypt_sim"
+//          } else {
+//              set env(CW_DIR_SIM) "/home/install/GENUS211/tools.lnx86/lib/chipware/sim"
+//              set CW_DIR_SIM      "/home/install/GENUS211/tools.lnx86/lib/chipware/sim"
+//          }
+/home/install/GENUS211/tools.lnx86/lib/chipware/old_encrypt_sim
+// Command: set_multiplier_implementation boothrca -both
+// Command: set_multiplier_implementation boothrca -both
+0
+// Command: set_undefined_cell black_box -noascend -both
+// Command: set_undefined_cell black_box -noascend -both
+0
+// Command: add_search_path /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib -library -both
+// Command: add_search_path /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib -library -both
+0
+// Command: read_library -liberty -both \
+//              /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty/tsl18fs120_scl_ss.lib \
+//              /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib/tsl18cio150_max.lib \
+//              /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty/tsl18fs120_scl_ss.lib \
+//              /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib/tsl18cio150_max.lib
+// Command: read_library -liberty -both /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty/tsl18fs120_scl_ss.lib /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib/tsl18cio150_max.lib /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty/tsl18fs120_scl_ss.lib /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib/tsl18cio150_max.lib
+// Parsing file /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty/tsl18fs120_scl_ss.lib ...
+// Parsing file /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib/tsl18cio150_max.lib ...
+// Parsing file /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/liberty/tsl18fs120_scl_ss.lib ...
+// Parsing file /home/msdlab/Desktop/Intern_Vignesh/03_UART_SYNTHESIS/iolib/tsl18cio150_max.lib ...
+// Note: (FIL1.8) File read in multiple times (occurrence:2)
+// Warning: (RTL9.16) Duplicated operating_condition, the second one is ignored (occurrence:2)
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:4)
+// Warning: (RTL9.25) Liberty cell function has been overwritten due to multiple declarations (occurrence:6)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:20)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:8)
+// Note: (UDP1.1) Swapped set and reset of DFF/DLAT (occurrence:6)
+// Note: (UDP3) Merged redundant user-defined DFF/DLAT primitive(s) (occurrence:6)
+// Warning: (IGN3.2) Duplicate modules/entities are detected. Subsequent modules/entities are ignored (occurrence:627)
+// Note: Read Liberty library successfully
+0
+CPU time     : 0.46    seconds
+Elapse time  : 1       seconds
+Memory usage : 125.43  M bytes
+// Command: set_undriven_signal 0 -golden
+// Command: set_undriven_signal 0 -golden
+0
+// Command: set lec_version_required "16.20100"
+16.20100
+// Command: if {$lec_version >= $lec_version_required} {
+//              set_naming_style genus -golden
+//          } else {
+//              set_naming_style rc -golden
+//          }
+// Command: set_naming_style genus -golden
+0
+// Command: set_naming_rule "%s\[%d\]" -instance_array -golden
+// Command: set_naming_rule %s[%d] -instance_array -golden
+0
+// Command: set_naming_rule "%s_reg" -register -golden
+// Command: set_naming_rule %s_reg -register -golden
+0
+// Command: set_naming_rule "%L.%s" "%L\[%d\].%s" "%s" -instance -golden
+// Command: set_naming_rule %L.%s %L[%d].%s %s -instance -golden
+0
+// Command: set_naming_rule "%L.%s" "%L\[%d\].%s" "%s" -variable -golden
+// Command: set_naming_rule %L.%s %L[%d].%s %s -variable -golden
+0
+// Command: set lec_version_required "17.10200"
+17.10200
+// Command: if {$lec_version >= $lec_version_required} {
+//              set_naming_rule -ungroup_separator {_} -golden
+//          }
+// Command: set_naming_rule -ungroup_separator _ -golden
+0
+// Command: set lec_version_required "17.20301"
+17.20301
+// Command: if {$lec_version >= $lec_version_required} {
+//              set_hdl_options -const_port_extend
+//          }
+// Command: set_hdl_options -const_port_extend
+0
+// Command: set_hdl_options -unsigned_conversion_overflow on
+// Command: set_hdl_options -unsigned_conversion_overflow on
+0
+// Command: set_hdl_option -v_to_vd on
+// Command: set_hdl_options -v_to_vd on
+// Note: '-v' to '-vd' option is 'ON'
+0
+// Command: set lec_version_required "20.20226"
+20.20226
+// Command: if {$lec_version >= $lec_version_required} {
+//              set_hdl_options -VERILOG_INCLUDE_DIR "sep:src"
+//          } else {
+//              set_hdl_options -VERILOG_INCLUDE_DIR "sep:src:cwd"
+//          }
+// Command: set_hdl_options -VERILOG_INCLUDE_DIR sep:src
+0
+// Command: add_search_path . -design -golden
+// Command: add_search_path . -design -golden
+0
+// Command: read_design  -define SYNTHESIS  -merge bbox -golden -lastmod -noelab -verilog2k  baud_gen.v uart_tx.v uart_rx.v uart_top.v uart_top_pad.v
+// Command: read_design -define SYNTHESIS -merge bbox -golden -lastmod -noelab -verilog2k baud_gen.v uart_tx.v uart_rx.v uart_top.v uart_top_pad.v
+// Parsing file baud_gen.v ...
+// Parsing file uart_tx.v ...
+// Parsing file uart_rx.v ...
+// Parsing file uart_top.v ...
+// Parsing file uart_top_pad.v ...
+0
+// Command: elaborate_design -golden -root {uart_top_pad} -rootonly -rootonly  
+// Command: elaborate_design -golden -root uart_top_pad -rootonly -rootonly
+// Golden root module is set to 'uart_top_pad'
+// Warning: (RTL1.2) Variable/signal is assigned by multiple non-blocking assignments (occurrence:4)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:11)
+// Note: (RTL5.5a) Default case item with non-X assignment(s) (occurrence:2)
+// Note: (RTL5.7) Default case item with inconsistent assignment(s). (occurrence:2)
+// Warning: (RTL7.10a) Comparison with different data sizes (occurrence:1)
+// Note: (VLG6.4) Supported system datapath function call (occurrence:1)
+// Note: (VLG9.2) The `define macro is used (occurrence:1)
+// Warning: (HRC3.2) Component is instantiated without any specified port connections (occurrence:4)
+// Note: (HRC3.5b) Open output port connection is detected (occurrence:4)
+0
+// Command: read_design -verilog95   -revised -lastmod -noelab fv/uart_top_pad/fv_map.v.gz
+// Command: read_design -verilog95 -revised -lastmod -noelab fv/uart_top_pad/fv_map.v.gz
+// Parsing file fv/uart_top_pad/fv_map.v.gz ...
+0
+// Command: elaborate_design -revised -root {uart_top_pad}
+// Command: elaborate_design -revised -root uart_top_pad
+// Revised root module is set to 'uart_top_pad'
+// Warning: (RTL14) Signal has input but it has no output (occurrence:3)
+0
+// Command: uniquify -all -nolib -golden
+// Command: uniquify -all -nolib -golden
+Uniquified 0 module(s)
+0
+// Command: report_design_data
+// Command: report_design_data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules         5               5
+Library-cells         88             305
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT               12                   12
+OUTPUT              13                   13
+--------------------------------------------
+AND        *       198                  151
+BUF        *        26                   51
+DFF                 63                   63
+INV        *        31                  181
+MUX        *       122                    0
+NAND       *         0                   12
+NOR        *        17                   24
+OR         *        76                   96
+TIE0       *         2                    0
+TIE1       *         2                    0
+WIRE       *         1                    0
+XNOR       *         0                    3
+XOR        *        21                   13
+------ word-level --------------------------
+ADD        *         5                    0
+NE         *         1                    0
+WMUX       *        28                    0
+WSEL       *        24                    0
+--------------------------------------------
+Total              559                  594
+
+0
+// Command: report_black_box
+// Command: report_black_box
+0
+// Command: set_flatten_model -seq_constant
+// Command: set_flatten_model -seq_constant
+0
+// Command: set_flatten_model -seq_constant_x_to 0
+// Command: set_flatten_model -seq_constant_x_to 0
+0
+// Command: set_flatten_model -nodff_to_dlat_zero
+// Command: set_flatten_model -nodff_to_dlat_zero
+0
+// Command: set_flatten_model -nodff_to_dlat_feedback
+// Command: set_flatten_model -nodff_to_dlat_feedback
+0
+// Command: set_flatten_model -hier_seq_merge
+// Command: set_flatten_model -hier_seq_merge
+0
+// Command: set_flatten_model -balanced_modeling
+// Command: set_flatten_model -balanced_modeling
+0
+// Command: set lec_version_required "20.10100"
+20.10100
+// Command: if {$lec_version >= $lec_version_required} {
+//              check_verification_information
+//          }
+// Command: check_verification_information
+Checking Sequential constant...
+Checking Sequential merge...
+Checking Synthesis equation...
+================================================================================
+Implementation Information Check Summary: 
+--------------------------------------------------------------------------------
+Total Sequential Constants:     0
+  Name Collision:               0
+  Name Ambiguous:               0
+  Name not Found:               0
+--------------------------------------------------------------------------------
+Total Sequential Merges:        0
+  Name Collision:               0
+  Name Ambiguous:               0
+  Name not Found:               0
+  Merge Target:
+    Name Ambiguous:             0
+    Name not Found:             0
+--------------------------------------------------------------------------------
+Total Synthesis Equations:      0
+  Module not Found:             0
+  Equation Conflict:            0
+  Equation Syntax Error:        0
+No Equation Modules:            0
+================================================================================
+0
+// Command: set_analyze_option -auto -report_map
+// Command: set_analyze_option -auto -report_map
+0
+// Command: write_hier_compare_dofile hier_tmp2.lec.do -verbose -noexact_pin_match -constraint -usage \
+//          -replace -balanced_extraction -input_output_pin_equivalence \
+//          -prepend_string "report_design_data; report_unmapped_points -summary; report_unmapped_points -notmapped; analyze_datapath -module -verbose; eval analyze_datapath $DATAPATH_SOLVER_OPTION -verbose"
+// Command: write_hier_compare_dofile hier_tmp2.lec.do -verbose -noexact_pin_match -constraint -usage -replace -balanced_extraction -input_output_pin_equivalence -prepend_string {report_design_data; report_unmapped_points -summary; report_unmapped_points -notmapped; analyze_datapath -module -verbose; eval analyze_datapath -flowgraph -verbose}
+// The following settings are used for hierarchical dofile generation:
+// Modeling Options:
+    Auto setup disabled
+    GATED_Clock modeling enabled
+// Mapping Method:
+    Name Only
+--------------------------------------------------------------------------------
+// Flattening Golden and Revised designs ...
+--------------------------------------------------------------------------------
+// Processing Golden ...
+// Modeling Golden ...
+// (F1) Created 1 wire resolution gate(s) due to multiple-driven net(s)
+// Processing Revised ...
+// Modeling Revised ...
+// (F1) Created 1 wire resolution gate(s) due to multiple-driven net(s)
+// Balanced modeling mapped 126 out of 126 DFF/DLATs
+// (F27) Converted 1 internal input port(s) to inout port(s)
+// (F30) Ignored 1 weak device(s) due to the existence of strong device(s)
+// (F27) Converted 1 internal input port(s) to inout port(s)
+// (F30) Ignored 1 weak device(s) due to the existence of strong device(s)
+// Warning: Automatic key point mapping is skipped
+// Command: MAP KEy Points
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            12     13     63        88      
+--------------------------------------------------------------------------------
+Revised           12     13     63        88      
+================================================================================
+--------------------------------------------------------------------------------
+// Starting hierarchical dofile generation ...
+--------------------------------------------------------------------------------
+// Total Matching Module Instance Pairs =  5
+// Module Instantiation Ratio in Golden = 1.00
+// Module Instantiation Ratio in Revised = 1.00
+// Gathering Instance Boundary Information ...
+// Extracting Constraints in Golden ...
+// Extracting Constraints in Revised ...
+// Extracting logic-cone properties of pins ...
+// Balancing Constraints ...
+// Checking constraints with verification information ...
+Module: uart_rx
+    Instance u_uart_top/u_uart_rx
+// Checking constraints with verification information ...
+Module: uart_tx
+    Instance u_uart_top/u_uart_tx
+// Checking constraints with verification information ...
+Module: uart_top_CLK_FREQ50000000_BAUD_RATE9600
+    Instance u_uart_top
+// Resolving Constraints ...
+// Writing hierarchical dofile ...
+# The following module pairs are not written because of number of primitive
+# instances less than 50:
+# baud_gen_CLK_FREQ50000000_BAUD_RATE9600, prim-cnt = 41 (G) and baud_gen_CLK_FREQ50000000_BAUD_RATE9600, prim-cnt = 48 (R)
+1 module pairs are not written because of primitive instances less than 50
+// Note: Use the option '-threshold' to allow writing out modules with primitive instances less than 50
+4 module pairs are written for hierarchical comparison
+0
+// Command: run_hier_compare hier_tmp2.lec.do -dynamic_hierarchy
+// Command: run_hier_compare hier_tmp2.lec.do -dynamic_hierarchy
+// Running Module uart_tx and uart_tx
+// Command: set_root_module uart_tx -Golden
+0
+// Command: set_root_module uart_tx -Revised
+0
+// Command: set_module_property -instance /u_uart_top/u_uart_tx -Golden
+0
+// Command: set_module_property -instance /u_uart_top/u_uart_tx -Revised
+0
+// Command: report_black_box -NOHidden
+0
+// Command: set_system_mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Processing Revised ...
+// Modeling Revised ...
+// Balanced modeling mapped 42 out of 42 DFF/DLATs
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            12     2      21        35      
+--------------------------------------------------------------------------------
+Revised           12     2      21        35      
+================================================================================
+// Running automatic setup...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            12     2      21        35      
+--------------------------------------------------------------------------------
+Revised           12     2      21        35      
+================================================================================
+// Automatic setup finished.
+0
+// Command: report_design_data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules         1               1
+Library-cells         20              92
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT               12                   12
+OUTPUT               2                    2
+--------------------------------------------
+AND        *        89                   64
+BUF        *         0                    4
+DFF                 21                   21
+INV        *         9                   74
+MUX        *        38                    0
+NAND       *         0                    8
+NOR        *         8                    6
+OR         *        30                   41
+XOR        *         6                    5
+------ word-level --------------------------
+ADD        *         2                    0
+WMUX       *        10                    0
+WSEL       *         8                    0
+--------------------------------------------
+Total              201                  223
+
+// Command: report_unmapped_points -summary
+There is no unmapped point
+// Command: report_unmapped_points -notmapped
+There is no unmapped point
+// Command: analyze_datapath -module -verbose
+// Note: Multithreaded module datapath analysis (MDP) is enabled
+// Warning: No eligible datapath module in the design. Skip ...
+// Command: analyze_datapath -flowgraph -verbose
+0
+// Command: add_compared_points -all
+// 23 compared points added to compare list
+0
+// Command: compare -noneq_stop 1  -threads 1,4
+// Compare will stop on the 1st non-equivalent point
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           2      21        23      
+================================================================================
+CPU time     : 0.97    seconds
+Elapse time  : 3       seconds
+Memory usage : 182.84  M bytes
+// Command: analyze abort -compare
+There is no abort/specified point to be analyzed.
+// Command: save_hier_compare_result
+0
+// Command: set_system_mode setup
+0
+// Command: add_black_box uart_tx -module -hier -Golden
+0
+// Command: add_black_box uart_tx -module -hier -Revised
+0
+// Command: usage
+CPU time     : 0.99    seconds
+Memory usage : 182.84  M bytes
+0
+Processed 1 out of 4 module pairs	EQ: 1	NEQ: 0	ABORT: 0
+// Running Module uart_rx and uart_rx
+// Command: set_root_module uart_rx -Golden
+0
+// Command: set_root_module uart_rx -Revised
+0
+// Command: set_module_property -instance /u_uart_top/u_uart_rx -Golden
+0
+// Command: set_module_property -instance /u_uart_top/u_uart_rx -Revised
+0
+// Command: report_black_box -NOHidden
+0
+// Command: set_system_mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Processing Revised ...
+// Modeling Revised ...
+// Balanced modeling mapped 64 out of 64 DFF/DLATs
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            4      11     32        47      
+--------------------------------------------------------------------------------
+Revised           4      11     32        47      
+================================================================================
+// Running automatic setup...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            4      11     32        47      
+--------------------------------------------------------------------------------
+Revised           4      11     32        47      
+================================================================================
+// Automatic setup finished.
+0
+// Command: report_design_data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules         1               1
+Library-cells         36             157
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT                4                    4
+OUTPUT              11                   11
+--------------------------------------------
+AND        *       102                   78
+BUF        *         0                   21
+DFF                 32                   32
+INV        *        16                   94
+MUX        *        75                    0
+NAND       *         0                    4
+NOR        *         8                   10
+OR         *        46                   53
+WIRE       *         1                    0
+XNOR       *         0                    2
+XOR        *         7                    3
+------ word-level --------------------------
+ADD        *         2                    0
+NE         *         1                    0
+WMUX       *        17                    0
+WSEL       *        16                    0
+--------------------------------------------
+Total              287                  297
+
+// Command: report_unmapped_points -summary
+There is no unmapped point
+// Command: report_unmapped_points -notmapped
+There is no unmapped point
+// Command: analyze_datapath -module -verbose
+// Note: Multithreaded module datapath analysis (MDP) is enabled
+// Warning: No eligible datapath module in the design. Skip ...
+// Command: analyze_datapath -flowgraph -verbose
+0
+// Command: add_compared_points -all
+// 43 compared points added to compare list
+0
+// Command: compare -noneq_stop 1  -threads 1,4
+// Compare will stop on the 1st non-equivalent point
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           11     32        43      
+================================================================================
+CPU time     : 1.28    seconds
+Elapse time  : 5       seconds
+Memory usage : 189.20  M bytes
+// Command: analyze abort -compare
+There is no abort/specified point to be analyzed.
+// Command: save_hier_compare_result
+0
+// Command: set_system_mode setup
+0
+// Command: add_black_box uart_rx -module -hier -Golden
+0
+// Command: add_black_box uart_rx -module -hier -Revised
+0
+// Command: usage
+CPU time     : 1.29    seconds
+Memory usage : 189.20  M bytes
+0
+Processed 2 out of 4 module pairs	EQ: 2	NEQ: 0	ABORT: 0
+// Running Module uart_top_CLK_FREQ50000000_BAUD_RATE9600 and uart_top_CLK_FREQ50000000_BAUD_RATE9600
+// Command: set_root_module uart_top_CLK_FREQ50000000_BAUD_RATE9600 -Golden
+// Warning: Total black box modules referenced in Golden = 2
+0
+// Command: set_root_module uart_top_CLK_FREQ50000000_BAUD_RATE9600 -Revised
+// Warning: Total black box modules referenced in Revised = 2
+0
+// Command: set_module_property -instance /u_uart_top -Golden
+0
+// Command: set_module_property -instance /u_uart_top -Revised
+0
+// Command: report_black_box -NOHidden
+HIER: (G R) uart_rx
+HIER: (G R) uart_tx
+0
+// Command: set_system_mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Processing Revised ...
+// Modeling Revised ...
+// Balanced modeling mapped 20 out of 20 DFF/DLATs
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF    BBOX      Total   
+--------------------------------------------------------------------------------
+Golden            12     13     10     2         37      
+--------------------------------------------------------------------------------
+Revised           12     13     10     2         37      
+================================================================================
+// Running automatic setup...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF    BBOX      Total   
+--------------------------------------------------------------------------------
+Golden            12     13     10     2         37      
+--------------------------------------------------------------------------------
+Revised           12     13     10     2         37      
+================================================================================
+// Automatic setup finished.
+0
+// Command: report_design_data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules         4               4
+Library-cells          2              30
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT               12                   12
+OUTPUT              13                   13
+--------------------------------------------
+AND        *         7                    9
+DFF                 10                   10
+INV        *         6                   13
+MUX        *         9                    0
+NOR        *         1                    8
+OR         *         0                    2
+XNOR       *         0                    1
+XOR        *         8                    5
+------ word-level --------------------------
+ADD        *         1                    0
+WMUX       *         1                    0
+BBOX                 2                    2
+--------------------------------------------
+Total               43                   50
+
+// Command: report_unmapped_points -summary
+There is no unmapped point
+// Command: report_unmapped_points -notmapped
+There is no unmapped point
+// Command: analyze_datapath -module -verbose
+// Note: Multithreaded module datapath analysis (MDP) is enabled
+// Warning: No eligible datapath module in the design. Skip ...
+// Command: analyze_datapath -flowgraph -verbose
+0
+// Command: add_compared_points -all
+// 25 compared points added to compare list
+0
+// Command: compare -noneq_stop 1  -threads 1,4
+// Compare will stop on the 1st non-equivalent point
+================================================================================
+Compared points      PO     DFF    BBOX      Total   
+--------------------------------------------------------------------------------
+Equivalent           13     10     2         25      
+================================================================================
+CPU time     : 1.49    seconds
+Elapse time  : 7       seconds
+Memory usage : 189.20  M bytes
+// Command: analyze abort -compare
+There is no abort/specified point to be analyzed.
+// Command: save_hier_compare_result
+0
+// Command: set_system_mode setup
+0
+// Command: add_black_box uart_top_CLK_FREQ50000000_BAUD_RATE9600 -module -hier -Golden
+0
+// Command: add_black_box uart_top_CLK_FREQ50000000_BAUD_RATE9600 -module -hier -Revised
+0
+// Command: usage
+CPU time     : 1.51    seconds
+Memory usage : 189.20  M bytes
+0
+Processed 3 out of 4 module pairs	EQ: 3	NEQ: 0	ABORT: 0
+// Running Module uart_top_pad and uart_top_pad
+// Command: set_root_module uart_top_pad -Golden
+// Warning: Total black box modules referenced in Golden = 3
+0
+// Command: set_root_module uart_top_pad -Revised
+// Warning: Total black box modules referenced in Revised = 3
+0
+// Command: set_module_property -instance / -Golden
+0
+// Command: set_module_property -instance / -Revised
+0
+// Command: report_black_box -NOHidden
+HIER: (G R) uart_top_CLK_FREQ50000000_BAUD_RATE9600
+0
+// Command: set_system_mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// (F1) Created 1 wire resolution gate(s) due to multiple-driven net(s)
+// Processing Revised ...
+// Modeling Revised ...
+// (F1) Created 1 wire resolution gate(s) due to multiple-driven net(s)
+// (F27) Converted 1 internal input port(s) to inout port(s)
+// (F30) Ignored 1 weak device(s) due to the existence of strong device(s)
+// (F27) Converted 1 internal input port(s) to inout port(s)
+// (F30) Ignored 1 weak device(s) due to the existence of strong device(s)
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     BBOX      Total   
+--------------------------------------------------------------------------------
+Golden            12     13     1         26      
+--------------------------------------------------------------------------------
+Revised           12     13     1         26      
+================================================================================
+// Running automatic setup...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     BBOX      Total   
+--------------------------------------------------------------------------------
+Golden            12     13     1         26      
+--------------------------------------------------------------------------------
+Revised           12     13     1         26      
+================================================================================
+// Automatic setup finished.
+0
+// Command: report_design_data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules         2               2
+Library-cells         30              26
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT               12                   12
+OUTPUT              13                   13
+--------------------------------------------
+BUF                 26                   26
+TIE0       *         2                    0
+TIE1       *         2                    0
+------ word-level --------------------------
+BBOX                 1                    1
+--------------------------------------------
+Total               31                   27
+
+// Command: report_unmapped_points -summary
+There is no unmapped point
+// Command: report_unmapped_points -notmapped
+There is no unmapped point
+// Command: analyze_datapath -module -verbose
+// Note: Multithreaded module datapath analysis (MDP) is enabled
+// Warning: No eligible datapath module in the design. Skip ...
+// Command: analyze_datapath -flowgraph -verbose
+0
+// Command: add_compared_points -all
+// 14 compared points added to compare list
+0
+// Command: compare -noneq_stop 1  -threads 1,4
+// Compare will stop on the 1st non-equivalent point
+================================================================================
+Compared points      PO     BBOX      Total   
+--------------------------------------------------------------------------------
+Equivalent           13     1         14      
+================================================================================
+CPU time     : 1.74    seconds
+Elapse time  : 9       seconds
+Memory usage : 190.27  M bytes
+// Command: analyze abort -compare
+There is no abort/specified point to be analyzed.
+// Command: save_hier_compare_result
+0
+// Command: set_system_mode setup
+0
+// Command: usage
+CPU time     : 1.74    seconds
+Memory usage : 190.52  M bytes
+0
+Processed 4 out of 4 module pairs	EQ: 4	NEQ: 0	ABORT: 0
+
+================================================================================
+Module Comparison Results
+--------------------------------------------------------------------------------
+Equivalent                     4
+--------------------------------------------------------------------------------
+Total                          4
+--------------------------------------------------------------------------------
+Hierarchical compare : Equivalent 
+================================================================================
+0
+// Command: report_hier_compare_result -dynamicflattened
+// Command: report_hier_compare_result -dynamicflattened
+0
+// Command: report_verification -hier -verbose
+// Command: report_verification -hier -verbose
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      1
+     Tri-stated output:                                        checked
+     Revised X signals set to E:                               yes
+     Floating signals tied to Z:                               no *
+     Command "add clock" for clock-gating:                     not used
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+     All primary outputs are mapped:                           yes
+     Not-mapped DFF/DLAT is detected:                          no
+     All mapped points are added as compare points:            yes
+     All compared points are compared:                         yes
+     User added black box:                                     no
+     Black box mapped with different module name:              no
+     Empty module is not black boxed:                          no
+     Command "add ignore outputs" used:                        no
+     Always false constraints detected:                        no
+     Verified pin-equivalent outputs are unmapped:             no
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+     Change gate type:                                         no
+     Change wire:                                              no
+     Primary input added by user:                              no
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+     Multiple clocks in the design:                            no
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        1
+     Duplicate module definition:                              yes *
+     Black box due to undefined cells:                         no
+     Golden design has abnormal ratio of unreachable gates:    no
+     Ratio of golden unreachable gates:                        1%
+     Revised design has abnormal ratio of unreachable gates:   no
+     Ratio of revised unreachable gates:                       0%
+     All primary input bus ordering is consistent:             yes
+     All primary output bus ordering is consistent:            yes
+     DFF/DLAT not compared due to disabled clock port(s):        0
+     Always X compared point is detected:                      not checked
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+     Total Equivalent modules  = 4
+================================================================================
+pass
+// Command: set_system_mode lec
+// Command: set_system_mode lec
+0
+// Command: write_compared_points noneq.compared_points.uart_top_pad.rtl.fv_map.tcl -class noneq -tclmode -replace
+// Command: write_compared_points noneq.compared_points.uart_top_pad.rtl.fv_map.tcl -class noneq -tclmode -replace
+0
+// Command: set lec_version_required "21.10100"
+21.10100
+// Command: if {$lec_version >= $lec_version_required} {
+//              analyze_nonequivalent -source_diagnosis
+//              report_nonequivalent_analysis > noneq.source_diag.uart_top_pad.rtl.fv_map.rpt
+//          }
+// Command: analyze_nonequivalent -source_diagnosis
+// Warning: Non-equivalent points do not exist.
+// Command: report_nonequivalent_analysis > noneq.source_diag.uart_top_pad.rtl.fv_map.rpt
+0
+// Command: report_test_vector -noneq > noneq.test_vector.uart_top_pad.rtl.fv_map.rpt
+// Command: report_test_vector -noneq > noneq.test_vector.uart_top_pad.rtl.fv_map.rpt
+0
+// Command: set_system_mode setup
+// Command: set_system_mode setup
+0
+// Command: write_verification_information
+// Command: write_verification_information
+// Verification information is written to rtl_fv_map_db.
+0
+// Command: report_verification_information
+// Command: report_verification_information
+// Generating reports on verification information at /home/msdlab/Desktop/Intern_Vignesh/04_UART_POST_SYNTHESIS_LEC/rtl_fv_map_db...
+LEC run scores:
+================================================================================
+Step                Score     Range          
+--------------------------------------------------------------------------------
+result_status       10        10             
+runtime             10        10             
+mapping             10        10             
+sequential_constant 10        10             
+sequential_merge    5         10             
+sequential_phase    10        10             
+datapath_analysis   5         10             
+combinational_loop  5         10             
+mismatch_detection  5         10             
+overall             70        90             
+================================================================================
+LEC results versus attributes:
+================================================================================
+Attribute           Total     Inconsistency  Combined Table                
+--------------------------------------------------------------------------------
+sequential_constant 2         0              sequential_constant.json      
+sequential_merge    0         0                                            
+sequential_phase    63        0              sequential_phase.json         
+================================================================================
+The tables can be viewed directly using web interface.
+// Done with reporting verification information.
+0
+// Command: set lec_version_required "18.20330"
+18.20330
+// Command: if {$lec_version >= $lec_version_required} {
+//              report_implementation_information
+//          }
+// Command: report_implementation_information
+// Reporting implementation information...
+// Information summary:
+================================================================================
+        Information Category     Total      Used    Unused  Rejected     Abort
+--------------------------------------------------------------------------------
+   Sequential instance phase        63        63         0         0         0
+               Phase mapping         0         0         0         0         0
+         Sequential constant         0         0         0         0         0
+            Sequential merge         0         0         0         0         0
+      Sequential unreachable         0         0         0         0         0
+      Sequential duplication         0         0         0         0         0
+       Boundary optimization         0         0         0         0         0
+          Synthesis equation         0         0         0         0         0
+  Combinational loop breaker         0         0         0         0         0
+================================================================================
+0
+// Command: set_system_mode lec
+// Command: set_system_mode lec
+0
+// Command: puts "No of compare points = [get_compare_points -count]"
+// Command: get_compare_points -count
+No of compare points = 14
+// Command: puts "No of diff points    = [get_compare_points -NONequivalent -count]"
+// Command: get_compare_points -NONequivalent -count
+No of diff points    = 0
+// Command: puts "No of abort points   = [get_compare_points -abort -count]"
+// Command: get_compare_points -abort -count
+No of abort points   = 0
+// Command: puts "No of unknown points = [get_compare_points -unknown -count]"
+// Command: get_compare_points -unknown -count
+No of unknown points = 0
+// Command: if {[get_compare_points -count] == 0} {
+//              puts "---------------------------------"
+//              puts "ERROR: No compare points detected"
+//              puts "---------------------------------"
+//          }
+// Command: get_compare_points -count
+// Command: if {[get_compare_points -NONequivalent -count] > 0} {
+//              puts "------------------------------------"
+//              puts "ERROR: Different Key Points detected"
+//              puts "------------------------------------"
+//          }
+// Command: get_compare_points -NONequivalent -count
+// Command: if {[get_compare_points -abort -count] > 0} {
+//              puts "-----------------------------"
+//              puts "ERROR: Abort Points detected "
+//              puts "-----------------------------"
+//          }
+// Command: get_compare_points -abort -count
+// Command: if {[get_compare_points -unknown -count] > 0} {
+//              puts "----------------------------------"
+//              puts "ERROR: Unknown Key Points detected"
+//              puts "----------------------------------"
+//          }
+// Command: get_compare_points -unknown -count
+// Command: set lec_version_required "19.10100"
+19.10100
+// Command: if {$lec_version >= $lec_version_required} {
+//              analyze_results -logfiles $logfile
+//          }
+// Command: analyze_results -logfiles ./rtl2intermediate.lec.log
+// Analyzing logfile './rtl2intermediate.lec.log'
+// Warning: Analyze results collects information from the log file but does not
+//          qualify the execution or completeness of the run.
+// Logfile Results
+================================================================================
+|                  Conformal Version |21.10-s300 
+|                        Root Module |uart_top_pad 
+|                           CPU Time |1 sec
+|                       Elapsed Time |9 sec
+|                             Memory |190.52 MB
+|              Power Grid Comparison |N/A 
+|               Power Intent Compare |N/A 
+|           Supply Power Consistency |N/A 
+|        Retention Power Consistency |N/A 
+|             Compare Power Crossing |N/A 
+|                     LEC Comparison |PASS 
+|                 Flatten Comparison |N/A 
+|            Hierarchical Comparison |PASS 
+|                      Logfile Lines |957 
+|                       Logfile Name |rtl2intermediate.lec.log 
+|              Logfile Modified Time |Thu Jul  9 11:00:58 2026 
+|         Implementation Information |fv/uart_top_pad 
+|       Set Verification Information |/home/msdlab/Desktop/Intern_Vignesh/04_UART_POST_SYNTHESIS_LEC/rtl_fv_map_db 
+|      Read Verification Information |N/A 
+|                   Analysis Elapsed |0.1 sec
+|                    Runtime / #Gate |0.01 sec
+|Matched back-to-back isolation cell |N/A 
+|            Time-consuming commands | 1. compare: 8s(100.00%) (execute 4 time(s))
+================================================================================
+           
+// Usage Breakdown Summary
+================================================================================
+|Command                   |  Total Elapse Time|  Total CPU Time|    Peak Memory
+--------------------------------------------------------------------------------
+|read design -golden       |                0 s|             0 s|        0.00 MB
+|read design -revised      |                0 s|             0 s|        0.00 MB
+|read library              |                0 s|             0 s|      125.43 MB
+|write hier_compare dofile |                0 s|             0 s|        0.00 MB
+|analyze hier_compare      |                0 s|             0 s|        0.00 MB
+|run hier_compare dofile   |                0 s|             0 s|        0.00 MB
+|go hier_compare           |                0 s|             0 s|        0.00 MB
+           
+// Critical Warnings
+================================================================================
+|Occurance |Warning
+--------------------------------------------------------------------------------
+|1         |(RTL7.10a) Comparison with different data sizes
+================================================================================
+           
+           
+// Hierarchical Comparison Information
+--------------------------------------------------------------------------------
+// Hierarchical Run #1
+             
+// Write Dofile Command          : write_hier_compare_dofile hier_tmp2.lec.do -verbose -noexact_pin_match -constraint -usage -replace -balanced_extraction -input_output_pin_equivalence -prepend_string "report_design_data; report_unmapped_points -summary; report_unmapped_points -notmapped; analyze_datapath -module -verbose; eval analyze_datapath $DATAPATH_SOLVER_OPTION -verbose" (line: 287)
+// Run Hier_compare Command      : run_hier_compare hier_tmp2.lec.do -dynamic_hierarchy (line: 352)
+// Hierarchical Compare Result   : Equivalent
+// Smart instance selection      : Disable
+           
+// Hierarchical Comparison Statistics
+================================================================================
+|     Modules|       Total|         Max|         Min|         Avg
+--------------------------------------------------------------------------------
+|           4|           8|           2|           2|           2
+================================================================================
+  Modules: Total number of modules.
+  Total: Sum of all module runtimes(sec).
+  Max: Runtime of module with longest runtime.
+  Min: Runtime of module with shortest runtime.
+  Avg: Average runtime of all modules.
+           
+// Bottleneck Modules: 
+// Note: Report skipped due to brief overall runtime
+ 
+// Smart LEC Parallel Hierarchical Comparison Analysis
+// Note: Analysis is skipped due to brief overall runtime
+--------------------------------------------------------------------------------
+               
+// Resource usages of analysis: Cpu=0.09s Mem=130MB
+0
+// Command: vpxmode
+// Command: vpxmode
