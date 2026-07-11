@@ -163,11 +163,11 @@ The jump from 9,068 µm² (core logic only) to 42,911 µm² (with pads) is becau
 
 ### Synthesized Schematics (Genus)
 
-![Baud Rate Generator Synthesis](syn/output_files/output_images/Baud_rate_syn.png)
-![RX Synthesis](syn/output_files/output_images/Rx_syn.png)
-![TX Synthesis](syn/output_files/output_images/TX_syn.png)
-![UART Pad Synthesis](syn/output_files/output_images/Uart_pad_syn.png)
-![UART Top Synthesis](syn/output_files/output_images/UART_syn.png)
+![Baud Rate Generator Synthesis](syn/output_images/Baud_rate_syn.png)
+![RX Synthesis](syn/output_images/Rx_syn.png)
+![TX Synthesis](syn/output_images/TX_syn.png)
+![UART Pad Synthesis](syn/output_images/Uart_pad_syn.png)
+![UART Top Synthesis](syn/output_images/UART_syn.png)
 
 ---
 
