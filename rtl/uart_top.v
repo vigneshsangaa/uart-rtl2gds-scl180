@@ -1,19 +1,3 @@
-// =============================================================
-// Module      : uart_top
-// Description : Top-level UART. Integrates baud generator,
-//               transmitter, and receiver.
-//
-//               System interface (parallel side):
-//                 tx_start / tx_data  -> initiate a send
-//                 tx_busy             -> transmitter status
-//                 rx_data / rx_done   -> received byte + valid pulse
-//                 parity_error / framing_error -> RX error flags
-//
-//               Pin interface (serial side):
-//                 tx_serial -> drives external RX pin
-//                 rx_serial -> driven by external TX pin (ASYNC)
-// =============================================================
-
 module uart_top #(
     parameter CLK_FREQ  = 50_000_000,
     parameter BAUD_RATE = 9600
@@ -21,7 +5,6 @@ module uart_top #(
     input  wire       clk,
     input  wire       rst_n,
 
-    // Parallel / system-side interface
     input  wire        tx_start,
     input  wire [7:0]  tx_data,
     output wire        tx_busy,
@@ -31,7 +14,6 @@ module uart_top #(
     output wire        parity_error,
     output wire        framing_error,
 
-    // Serial / pin-side interface
     output wire        tx_serial,
     input  wire        rx_serial   // async external input
 );
