@@ -1,12 +1,3 @@
-// =============================================================
-// Module      : uart_tx
-// Description : UART Transmitter.
-//               Frame format: 1 start bit (0) + 8 data bits (LSB
-//               first) + 1 even parity bit + 1 stop bit (1).
-//               Runs off the 16x baud tick from baud_gen — counts
-//               16 ticks per bit period.
-// =============================================================
-
 module uart_tx (
     input  wire       clk,
     input  wire       rst_n,
