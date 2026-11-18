@@ -1,16 +1,3 @@
-// =============================================================
-// Module      : uart_rx
-// Description : UART Receiver.
-//               rx_serial is asynchronous to clk (it comes from an
-//               external device) -- this is the genuine CDC hazard
-//               in a UART design. We pass it through a 2-flop
-//               synchronizer before any logic touches it, to avoid
-//               metastability.
-//               After sync, we use 16x oversampling to find the
-//               middle of each bit (tick count == 7 or 8) for a
-//               reliable, noise-tolerant sample point.
-// =============================================================
-
 module uart_rx (
     input  wire       clk,
     input  wire       rst_n,
@@ -22,9 +9,6 @@ module uart_rx (
     output reg          framing_error    // 1-cycle pulse: stop bit not seen as 1
 );
 
-    // ---------------------------------------------------------
-    // CDC: 2-flop synchronizer for the async serial input
-    // ---------------------------------------------------------
     reg rx_sync_ff1, rx_sync_ff2;
 
     always @(posedge clk or negedge rst_n) begin
@@ -39,9 +23,7 @@ module uart_rx (
 
     wire rx_sync = rx_sync_ff2;   // synchronized, glitch-free RX line
 
-    // ---------------------------------------------------------
     // RX FSM
-    // ---------------------------------------------------------
     localparam IDLE   = 3'd0,
                START   = 3'd1,
                DATA    = 3'd2,
@@ -77,7 +59,6 @@ module uart_rx (
                     tick_cnt <= 0;
                     bit_idx  <= 0;
                     if (rx_sync == 1'b0) begin
-                        // possible start bit detected, begin verifying
                         state <= START;
                     end
                 end
